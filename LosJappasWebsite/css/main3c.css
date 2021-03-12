@@ -1,0 +1,1174 @@
+
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+   
+   @font-face {
+    font-family: inklj;
+    src: url('../fonts/ink-free-normal.ttf') format('opentype');
+    }
+
+   html {
+    font-size: 1em;
+    font-family: 'Karma', serif;
+    height: 100%;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Browser Upgrade Prompt
+     ========================================================================== */
+  
+  .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+  
+  /* _________________________________________________________________________ */
+  /* _______ MOBILE FIRST STYLES _____________________________________________ */
+  /* _________________________________________________________________________ */
+  
+  /* General Styles */
+  
+  html {
+    font-size: 16px;
+    background-color: #F2f2f2;
+  }
+  
+  body {
+    font-size: 1em;
+    color: #2c2c2c;
+  
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  
+    min-height: 100%;
+  }
+  
+  h1 {
+    font-family: inklj;
+    font-weight: bold;
+    text-align: center;
+    margin: 0.5em 0 0.2em 0;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    margin: 0.8em 0 0 0;
+  }
+
+  h3 {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.125em;
+    font-weight: normal;
+    padding: 0.8em 0 0 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  p {
+    line-height: 1.6em;
+    margin: 0;
+  }
+
+  p span {
+    font-weight: bold;
+  }
+
+  #nome {
+    background: none;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    color: #f25b00;
+    font-size: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  
+  /*************** WRAPPER ***************/
+  
+  .content-wrapper, #home, #cardapio, #contato {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    width: 100%;
+  }
+
+  .wrapper1, .wrapper2 {
+    display: flex;
+    flex-flow: row wrap;
+    width: 47.5%;
+  }
+  
+  
+  /* ________________________ HEADER / FOOTER STYLES __________________________ */
+  
+  header, .sidebar,
+  footer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+    margin: 0 0;
+    padding: 0 0;
+    background-color: #404040;
+  }
+  
+  .sidebar{display:none;}
+  
+  /* ________________________ HEADER STYLES ___________________________________ */
+  
+  header {
+    height: 60px;
+    box-shadow: 3px 3px 5px #e0e0e0;
+  }
+
+  header .content-wrapper {
+    flex-flow: row wrap;
+  }
+  
+  header h1, .sidebar h1 {
+    font-family: 'Muli', sans-serif;
+    font-size: 1.5625em;
+    font-weight: normal;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  header .wrapper1, .sidebar .wrapper1 {
+    background: url('../img/logo-back.png') no-repeat;
+    height: 36px;
+    background-position: right bottom;
+    background-size: 65%;
+    margin: 0.8em 1.5em;
+    width: 155px;
+  }
+
+  header .wrapper2, .sidebar .wrapper2 {
+    margin: 0.8em 1.5em;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    width: auto;
+  }
+
+  .buttom-nav {
+    position: static;
+    z-index: 9;
+    height: 24px;
+    width: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .line-nav, .line-nav2 {
+    background-color: #fdf3ed;
+    border-radius: 2px;
+    height: 4px;
+    width: 26px;
+  }
+
+  .line-nav2 {
+    width: 29px;
+  }
+
+  
+
+  /* ________________________ FOOTER STYLES ___________________________________ */
+  
+  footer {
+    width: 100%;
+    height: 80px;
+  }
+  
+  footer p {
+    font-size: 1em;
+    line-height: 1em;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+  }
+  
+  footer .content-wrapper {
+    flex-flow: row wrap;
+    height: 50%;
+    justify-content: center;
+    align-content: space-around;
+  }
+  
+    
+  /* ________________________ MAIN STYLES ___________________________________ */
+  
+  #options-nav {
+    width: 100%;
+    display: flex;
+    background-color: rgba(92, 92, 92, 1);
+  }
+  
+  #options-nav .nav, .nav-sidebar, ul {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  #options-nav .nav, .nav-sidebar {
+    display: none;
+    border-top: solid 1px #4b4b4b;
+    border-left: solid 1px #4b4b4b;
+    border-right: solid 1px #4b4b4b;
+  }
+  
+  #options-nav ul li, .nav-sidebar ul li {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #4b4b4b;
+  }
+  
+  #options-nav ul li a, .nav-sidebar ul li a {
+    font-family: 'Muli', sans-serif;
+    color: #fdf3ed;
+    font-size: 1.2em;
+    font-variant: small-caps;
+  }
+
+  #options-nav ul li a span, .nav-sidebar ul li a span {
+    border-bottom: solid 2px #fdf3ed;
+    font-weight: bold;
+  } 
+  
+  main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; 
+    align-items: center; 
+    flex: 1;
+  }
+
+  
+
+  /*************** HOME *******************/
+
+  #home, #home .content-wrapper {
+    flex: 1;
+    justify-content: center;
+    align-items: space-around;
+  }
+
+  .pic {
+    background: url('../img/niguiri-home3.png') repeat;
+    background-size: contain;
+    width: 100%;
+    padding-top: 62.92%; /* Aspect Ratio */
+    position: relative;
+  }
+
+  .text-pic-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-pic {
+    color: #fdf3ed;
+    font-size: 1.5em;
+  }
+
+  .intro {
+    width: 80%;
+    margin: 1em 0;
+  }
+
+  .divisao-p-laranja {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+    width: 100%;
+  }
+
+  .linha-p-laranja {
+    width: 30%;
+    border-bottom: solid 2px #f25b00;
+    align-items: center;
+  }
+  
+  .intro p {
+    font-size: 1em;
+    margin: 1em 0;
+  }
+
+  #home h3 {
+    padding: 0;
+    width: auto;
+    color: ivory;
+  }
+
+  .endereco, .funcionamento, .telefone {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+  }
+
+  .fas, .far {
+    font-size: 3em;
+    color: #f25b00;
+  }
+
+  
+
+  /*************** CARDAPIO ***************/
+  
+  #cardapio {
+    flex:1;
+    justify-content: flex-start;
+  }
+
+  #cardapio .content-wrapper{
+    justify-content: flex-start;
+    align-items: center;
+    /* width: 85%; */
+  }
+
+  .submenus-titles {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 2em 0 2em 0;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .submenus-titles ul {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-x: auto;
+    margin-bottom: -10000px;
+    padding-bottom: 10000px;
+    max-height: 100px;
+  }
+
+  .submenus-titles li {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    font-size: 1.1em;
+    font-family: 'Muli';
+    border: 1px solid #fff;
+    background-color: #f6f5f0;
+    border-radius: 5px;
+    padding: 0.4em 0.5em;
+    margin: 0 3px;
+    font-weight: normal;
+  }
+
+  .submenus-titles li:hover {
+    background-color: #fce8d3;
+  }
+
+  #menu-current {
+    background-color: #f25d00;
+    color: #f6f5f0;
+  }
+
+  #itens-cardapio ul {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    list-style-type: none;
+  }
+
+  #itens-cardapio li {
+    width: 100%;
+    line-height: 1.6em;
+    padding-left: 0.5em;
+  }
+
+  .divisao {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .linha {
+    height: 1px;
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #929292;
+  }
+
+  #cardapio p {
+    font-family: 'Muli', sans-serif;
+    color: #727272;
+    width: 100%;
+  }
+
+  #cardapio p span {
+    font-weight: normal;
+    color: #c59c83;
+    width: 100%;
+  }
+
+  .temaki p, .bebida p {
+    margin-bottom: 1em;
+  }
+
+  #itens-cardapio h1 {
+    text-align: left;
+    font-family: 'Muli', sans-serif;
+    font-variant: small-caps;
+  }
+
+  #cardapio .divisao-p-laranja {
+    justify-content: flex-start;
+  }
+
+  #cardapio h2 {
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    color: #f25b00;
+  }
+
+  #itens-cardapio {
+    margin: 1em 0.5em 2em 0.5em;
+    width: 100%;
+  }
+
+  .item-wrapper-combinados, .item-wrapper-combos, .item-wrapper-temakis, .item-wrapper-yakisoba, .item-wrapper-harumaki, .item-wrapper-porcoes, .item-wrapper-bebidas, .item-wrapper-sobremesas {
+    display: none;
+    width: 100%;
+    justify-content: space-between;
+    /* display: flex; */
+    flex-flow: row wrap;
+    height: 0;
+  }
+
+  .wrapper-on {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+  }
+
+  .combinado, .combo, .temaki, .yakisoba, .harumaki, .porcao, .bebida, .sobremesa {
+    margin: 1em 0;
+    padding: 0.8em 1.5em;
+    width: 100%;
+    background: url('../img/frame-blue2.png') repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    border-radius: 20px;
+  }
+
+  .fig-on {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .fig-off {
+    display: flex;
+    justify-content: center;
+  }
+
+  .single {
+    max-width: 100%;
+  }
+
+  .fig {
+    display: none;
+  }
+
+  #cardapio img {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    border-radius: 5px;
+  }
+  
+  .texto {
+    width: fit-content;
+    margin: auto 0 auto 0;
+    align-items: center;
+  }
+
+  .fig-on .fig {
+    width: 50%;
+    max-width: 300px;
+    min-height: 1px;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+  }
+
+  .fig-on .texto {
+    margin: auto 0 auto 1em;
+    width: 50%;
+  }
+
+  .back-to-top {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: none;
+    font-family: arial;
+    font-weight: bold;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9;
+    font-size: 40px;
+    line-height: 60px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+  }
+
+  .back-to-top p {
+    color: #999;
+  }
+
+  .back-to-top:hover {
+    background-color: #ccc;
+  }
+  
+  /*************** CONTACT ***************/
+  
+  main .wrapper1 {
+    justify-content: space-between;
+    flex-flow: column wrap;
+    height: 100%;
+    width: 100%;
+    padding: 0.5em 0;
+    align-items: center;
+  }
+  
+  #contato h3 {
+    padding: 0.5em 0;
+    text-align: center;
+    max-width: 400px;
+  }
+
+  #contato h2, #contato p {
+    text-align: center;
+  }
+
+  #contato .content-wrapper{
+    width: 85%;
+  }
+
+  #contato h2 {
+    color: #f25b00;
+  }
+
+  #contato .wrapper2 {
+    width: 100%;
+  }
+
+  iframe {
+    margin: 1em 0;
+  }
+  
+  /*************** POP-UP BOX ***************/
+  .hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    color: black;
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+    vertical-align:middle;
+  }
+
+  .hover_bkgr_fricc > .janela {
+    background: url('../img/phone5.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: ivory  ;
+    display: inline-block;
+    max-width: 350px;
+    vertical-align: middle;
+    width: 80%;
+    position: relative;
+    border-radius: 8px;
+    height: 100%;
+  }
+
+  .hover_bkgr_fricc > .janela > .tela {
+    position: relative;
+    height: 100%;
+    width:100%;
+  }
+
+  .popupCloseButton {
+    background-color: #fff;
+    color: black;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translateX(400%) translateY(-750%);
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+
+  .popupCloseButton:hover {
+    background-color: #ccc;
+  }
+    
+  
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /*
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
+  
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
+  
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+  * Hide visually and from screen readers, but maintain layout
+  */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+  
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  
+  .clearfix:after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  
+  @media only screen and (min-width: 450px) {
+
+  }
+
+  @media only screen and (min-width: 560px) {
+    
+    header, #options-nav {
+      display: none;
+    }
+
+    footer {
+      background-color: #2c2c2c;
+    }
+
+    #home, #cardapio, #contato {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .sidebar {
+      display:flex;
+      flex-flow: column wrap;
+      width: 200px;
+      height: calc(100vh - 80px);
+    }
+
+    .sidebar .wrapper1 {
+      flex-flow: row wrap;
+      margin: 1em 0;
+    }
+
+    .sidebar .wrapper2 {
+      width: 100%;
+      margin: 3em 0;
+      align-items: center;
+    }
+
+    .nav-sidebar {
+      display:flex;
+      border-left: none;
+      border-right: none;
+      width: 95%;
+    }
+
+    .nav-sidebar a {
+      width:  100%;
+      text-align: center;
+    }
+
+    .nav-sidebar li:hover {
+      background-color: #2c2c2c;
+    }
+
+    #home .content-wrapper, #cardapio .content-wrapper, #contato .content-wrapper {
+      overflow: auto;
+      height: calc(100vh - 80px);
+      flex-flow: row wrap;
+      width: calc(100vw - 200px);
+      justify-content: center;
+      align-content: flex-start;
+    }
+
+    .submenus-titles, #itens-cardapio {
+      width: 90%;
+    }
+
+    .submenus-titles {
+      padding-bottom: 1.5em;
+    }
+
+    .submenus-titles ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: unset;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      max-height: unset;
+    }
+
+    .submenus-titles li {
+      margin-bottom: 0.5em;
+    }
+
+    main .wrapper1 {
+      height: auto;
+    }
+
+    #itens-cardapio ul {
+      height: auto;
+    }
+
+  }
+
+  @media only screen and (min-width: 650px) {
+
+    .submenus-titles {
+      justify-content: center;
+    }
+
+    /* .submenus-titles ul {
+      max-width: 670px;
+    } */
+
+    #cardapio .submenus-titles li {
+      width: auto;
+    }
+
+    .wrapper-on {
+      justify-content: space-around;
+    }
+
+    .combinado, .combo, .temaki, .yakisoba, .harumaki, .porcao, .bebida, .sobremesa {
+      display: flex;
+      max-width: 37%;
+      padding-left: 2.5em;
+      padding-right: 2.5em;
+    }
+
+    .fig-on {
+      max-width: 100%;
+      /* padding-left: 0;
+      padding-right: 0; */
+    }
+
+    .single {
+      max-width: 100%;
+    }
+
+    /* #contato .content-wrapper {
+      justify-content: center;
+    }
+
+    #contato .wrapper1 {
+      max-width: 400px;
+      justify-content: center;
+    }
+
+    #contato .wrapper2 {
+      width: max-content;
+    } */
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    
+    
+    /* header {
+      height: 350px;
+    }
+    
+    header .content-wrapper, main .content-wrapper, footer .content-wrapper {
+      max-width: 1000px;
+    }
+
+    .back-to-top {
+      right: 100px;
+    }
+
+    #home .content-wrapper, #cardapio .content-wrapper {
+      max-width: 670px;
+    } */
+
+    .item-wrapper-harumaki, .item-wrapper-bebidas {
+      max-width: 530px;
+      margin: auto auto;
+    }
+
+    #contato .content-wrapper {
+      justify-content: space-around;
+      align-content: center;
+      /* max-width: 1000px; */
+    }
+
+    #contato .content-wrapper .wrapper1, #contato .content-wrapper .wrapper2 {
+      width: 47%;
+    }
+
+  }
+
+  @media only screen and (min-width: 950px) {
+
+
+    /* .back-to-top {
+      bottom: 100px;
+      right: 300px;
+    } */
+
+
+    
+    /* #home .content-wrapper {
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    } */
+
+    html {
+      font-size: 18px;
+    }
+
+    .sidebar .wrapper1 {
+      width: 175px;
+    }
+
+    #home .content-wrapper {
+      /* width: 70%; */
+      background: url('../img/niguiri-home3b.png') no-repeat;
+      background-size: cover;
+      background-position: center;
+      /* padding-top: 61.077%; */
+    }
+
+    .pic {
+      background: none;
+      height: calc((100vh - 80px)/3);
+      padding: 0;
+    }
+
+    .text-pic-div {flex-flow: row wrap;}
+    .text-pic {padding-left: 0.3em;}
+
+    #home {
+      color: #ffffff;
+    }
+
+    /* .intro {
+      margin: 0 1em;
+      max-width: calc(70% - 2em);
+    } */
+
+    .intro {
+      max-width: 880px;
+      font-size: 1.2em;
+    }
+
+    .info {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      max-width: 880px;
+    } 
+
+
+    .combinado, .combo, .temaki, .yakisoba, .harumaki, .porcao, .bebida, .sobremesa {
+      /* width: max-content; */
+      max-width: 37%;
+    }
+
+    /* .fig-on {
+      width: 45%;
+    }
+    
+    .fig-off {
+      min-width: 45%;
+    } */
+    
+    .item-wrapper-harumaki .single, .item-wrapper-bebidas .single {
+      max-width: 100%;
+    }
+
+    .wrapper-on {
+      justify-content: space-around;
+    }
+
+    .texto {
+      /* margin: auto 0 auto 1em; */
+    }
+
+  }
+
+  @media only screen and (min-width: 1000px) {
+
+    .submenus-titles ul {
+      /* max-width: 825px; */
+    }
+  }
+  
+  /* @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  /* } */
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+    /*
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+      content: "";
+    }
+    pre {
+      white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+    /*
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
+    thead {
+      display: table-header-group;
+    }
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+  
+  
