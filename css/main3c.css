@@ -17,9 +17,14 @@
     src: url('../fonts/ink-free-normal.ttf') format('opentype');
     }
 
+   @font-face {
+    font-family: karma;
+    src: url('../fonts/Karma-Regular.ttf') format('opentype');
+    }
+
    html {
     font-size: 1em;
-    font-family: 'Karma', serif;
+    font-family: karma, serif;
     height: 100%;
   }
   
